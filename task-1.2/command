@@ -1,0 +1,4 @@
+kubectl apply -f task-1.2/role.yaml
+kubectl apply -f task-1.2/rolebinding.yaml
+kubectl get roles
+kubectl get rolebindings

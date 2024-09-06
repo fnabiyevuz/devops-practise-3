@@ -1,0 +1,1 @@
+kubectl create configmap practice --from-literal=http_port="80" --from-literal=message="Proxiuma Uacademy DevOps Course"

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: task-1-5-test
+spec:
+  containers:
+  - name: kubectl
+    image: fnabiyev/kubectl-container:v1
+    ports:
+    - containerPort: 80

@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: pod-deploy-manager-binding
+  namespace: p-fazliddin
+subjects:
+- kind: ServiceAccount
+  name: fn-service
+  namespace: p-fazliddin
+roleRef:
+  kind: Role
+  name: pod-deploy-manager
+  apiGroup: rbac.authorization.k8s.io

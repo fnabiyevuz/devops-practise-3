@@ -1,0 +1,1 @@
+kubectl create serviceaccount fn-service -n p-fazliddin

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox-configmap
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ['sh', '-c', 'env && sleep 3600']  # This will print the environment variables and then sleep
+    envFrom:
+    - configMapRef:
+        name: practice

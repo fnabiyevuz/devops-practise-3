@@ -1,0 +1,68 @@
+NAME                                       READY   STATUS             RESTARTS       AGE
+nginx-deployment-576c6b7b6-k258q           1/1     Running            0              19m
+nginx-deployment-576c6b7b6-zqdvv           1/1     Running            0              19m
+nginx-deployment-task-2-76bddd9d8d-7kdjh   1/1     Running            0              15m
+nginx-deployment-task-2-76bddd9d8d-9zm6c   1/1     Running            0              15m
+redis-deployment-76f7c6f474-5hz67          1/1     Running            0              63s
+redis-deployment-76f7c6f474-5rcjl          1/1     Running            0              63s
+task-1-5                                   0/1     CrashLoopBackOff   9 (3m9s ago)   24m
+task-1-5-test                              0/1     CrashLoopBackOff   9 (95s ago)    22m
+
+
+Name:             redis-deployment-76f7c6f474-5hz67
+Namespace:        p-fazliddin
+Priority:         0
+Service Account:  default
+Node:             node05/10.0.1.7
+Start Time:       Fri, 06 Sep 2024 22:43:10 +0500
+Labels:           app=redis
+                  pod-template-hash=76f7c6f474
+Annotations:      cni.projectcalico.org/containerID: 0f83064f6e870a2b3c25bec343912377c9fa6716a589303d77db25808fa22d18
+                  cni.projectcalico.org/podIP: 10.233.74.44/32
+                  cni.projectcalico.org/podIPs: 10.233.74.44/32
+Status:           Running
+IP:               10.233.74.44
+IPs:
+  IP:           10.233.74.44
+Controlled By:  ReplicaSet/redis-deployment-76f7c6f474
+Containers:
+  redis:
+    Container ID:   containerd://0e437a70439537caeca57dfdb9f57654ad1e1c1ddc18ab53844ff8953f617408
+    Image:          redis:latest
+    Image ID:       docker.io/library/redis@sha256:eadf354977d428e347d93046bb1a5569d701e8deb68f090215534a99dbcb23b9
+    Port:           6379/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 06 Sep 2024 22:43:14 +0500
+    Ready:          True
+    Restart Count:  0
+    Readiness:      tcp-socket :6379 delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-z6gf7 (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-z6gf7:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age    From               Message
+  ----    ------     ----   ----               -------
+  Normal  Scheduled  3m46s  default-scheduler  Successfully assigned p-fazliddin/redis-deployment-76f7c6f474-5hz67 to node05
+  Normal  Pulling    3m43s  kubelet            Pulling image "redis:latest"
+  Normal  Pulled     3m42s  kubelet            Successfully pulled image "redis:latest" in 843ms (1.133s including waiting). Image size: 45905346 bytes.
+  Normal  Created    3m42s  kubelet            Created container redis
+  Normal  Started    3m42s  kubelet            Started container redis

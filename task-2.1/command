@@ -1,0 +1,1 @@
+kubectl create deployment nginx-deployment-task-2 --image=nginx:latest --replicas=2

@@ -1,0 +1,2 @@
+NAME                      TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+nginx-deployment-task-2   NodePort   10.233.62.24   <none>        80:31826/TCP   2m12s

@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  http_port: "80"
+  message: Proxiuma Uacademy DevOps Course
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-09-06T17:51:04Z"
+  name: practice
+  namespace: p-fazliddin
+  resourceVersion: "386820"
+  uid: cbceb3b2-ba0f-463e-953e-9a57e38caa2d

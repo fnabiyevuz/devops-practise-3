@@ -1,0 +1,25 @@
+NAME                      ENDPOINTS                          AGE
+nginx-deployment-task-2   10.233.74.42:80,10.233.99.220:80   4m54s
+
+
+Name:                     nginx-deployment-task-2
+Namespace:                p-fazliddin
+Labels:                   app=nginx-deployment-task-2
+Annotations:              <none>
+Selector:                 app=nginx-deployment-task-2
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.233.62.24
+IPs:                      10.233.62.24
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31826/TCP
+Endpoints:                10.233.74.42:80,10.233.99.220:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+NAME                      TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+nginx-deployment-task-2   NodePort   10.233.62.24   <none>        80:31826/TCP   6m58s
